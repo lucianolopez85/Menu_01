@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+lu, li, a{
+    text-decoration: none;
+    list-style: none;
+    color: black;  
+}
+body{
+    font-family: arial, sans-serif;
+}
+img{
+    width: 35px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+nav{
+    position: absolute;
+    background-color: rgba(16,16,16,.5);
+    width: 350px;
+    height: 100%;
+    left: -350px;
+    transition: 300ms;
+}
+a{
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+a:hover{    
+    background-color: rgb(176,224,230);
+    color: black;
+}
+label{
+    position: absolute;
+    padding: 15px;
+    z-index: 1; /*faz com que o elemento fique na frente do outro -
+    neste caso o menu(nav) quando retorna fica na frente do icone(label)*/  
+}
+ul{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+}
+input[type="checkbox"]:checked ~nav{
+    transform: translateX(350px);
+}
